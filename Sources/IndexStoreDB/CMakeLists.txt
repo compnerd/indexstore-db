@@ -12,9 +12,9 @@ add_library(IndexStoreDB
   SymbolRole.swift
   Symbol.swift)
 set_target_properties(IndexStoreDB PROPERTIES
-  Swift_MODULE_DIRECTORY ${CMAKE_BINARY_DIR}/swift
   INTERFACE_INCLUDE_DIRECTORIES ${CMAKE_BINARY_DIR}/swift)
-target_link_libraries(IndexStoreDB PRIVATE
+# FIXME(compnerd) should these be publicly leaked?
+target_link_libraries(IndexStoreDB PUBLIC
   Foundation
   CIndexStoreDB)
 

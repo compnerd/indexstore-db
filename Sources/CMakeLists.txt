@@ -1,1 +1,6 @@
 add_subdirectory(IndexStoreDB)
+if(BUILD_TESTING)
+  add_subdirectory(ISDBTestSupport)
+  add_subdirectory(ISDBTibs)
+  add_subdirectory(tibs)
+endif()
